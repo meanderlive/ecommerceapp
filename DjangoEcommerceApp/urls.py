@@ -10,6 +10,8 @@ from .views import *
 urlpatterns = [
     # admin login
     path('admin_login_process',adminLoginProcess,name="admin_login_process"),
+    path('admin/', adminLogin,name="admin_login"),
+    path('admin_logout_process',adminLogoutProcess,name="admin_logout_process"),
     path('', jewellery_account,name="jewellery-account"),
     path('store-shop', jewellery_store_shop,name="jewellery-store-shop"),
     path('cat', jewellery_store_categories,name="jewellery-store-categories"),

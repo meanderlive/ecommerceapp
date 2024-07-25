@@ -22,7 +22,7 @@ def adminLoginProcess(request):
     if user is not None:
         login(request=request,user=user)
 
-        return HttpResponseRedirect(reverse("admin_home"))
+        #return HttpResponseRedirect(reverse("admin_home"))
 
         return HttpResponseRedirect(reverse("jewellery-td-store-cat-images"))
     # jewellery-account

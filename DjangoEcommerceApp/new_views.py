@@ -133,14 +133,14 @@ def contact_form(request):
     return render(request, "dev_html/demo-jewellery-store-contact.html")
 
 # admin dashboard
-#@login_required
+@login_required(login_url="/admin")
 def jewellery_store_image_cat(request):
     return render(request,"jewellery_admin/jewellery_form_1.html")
 
 def table(request):
     return render(request,"jewellery_admin/table.html")
 
-#@login_required
+@login_required(login_url="/admin")
 def jewellery_td_store_image_cat(request):
     all_cat = Jewellery_store_cat.objects.all()
     return render(request,"jewellery_admin/jewellery_td_store_cat.html" ,{"cat_data":all_cat})
@@ -193,7 +193,7 @@ def delete_jewellery_store_cat(request,pk):
     msg.delete()
     return redirect('jewellery-td-store-cat-images')
 
-#@login_required
+@login_required(login_url="/admin")
 def featured_product_upload(request):
     if request.method == 'POST' and request.FILES:
         featured_product_image = request.FILES.get('featured_product_image')
@@ -215,7 +215,7 @@ def featured_product_upload(request):
 
     return render(request, 'jewellery_admin/jewellery-store-featured-products.html')
 
-#@login_required(login_url="/admin/")
+@login_required(login_url="/admin")
 def jewellery_td_featured_product(request):
     all_cat = Featured_products.objects.all()
     return render(request,"jewellery_admin/jewellary-store-td-featured-product.html" ,{"cat_data":all_cat})
@@ -259,7 +259,7 @@ def delete_jewellery_featured_product(request,pk):
     msg.delete()
     return redirect('jewellery-store-td-featured-products')
 
-#@login_required
+@login_required(login_url="/admin")
 def insta_images(request):
     if request.method == 'POST' and request.FILES:
         instagram_img1 = request.FILES.get('instagram_img1')
@@ -319,7 +319,7 @@ def jewellery_td_insta(request):
     all_cat = Instagram_image.objects.all()
     return render(request,"jewellery_admin/jewellery-store-td-instagram.html" ,{"cat_data":all_cat})
 
-#@login_required
+@login_required(login_url="/admin")
 def categories_upload(request):
     if request.method == 'POST' and request.FILES:
         earrings_image = request.FILES.get('earrings_image')
@@ -385,7 +385,7 @@ def delete_jewellery_categories(request,pk):
     msg.delete()
     return redirect('jewellery-td-store-instagram')
 
-
+@login_required(login_url="/admin")
 def blog_upload(request):
     if request.method == 'POST' and request.FILES:
         image = request.FILES.get('image')
@@ -408,7 +408,7 @@ def blog_upload(request):
     return render(request, 'jewellery_admin/jewellery-store-blog.html')
 
 
-
+@login_required(login_url="/admin")
 def jewellery_td_blog(request):
     all_cat = Blog_c.objects.all()
     return render(request,"jewellery_admin/jewellery-store-td-blog.html" ,{"cat_data":all_cat})
@@ -418,6 +418,7 @@ def delete_jewellery_blog(request,pk):
     msg=Blog_c.objects.get(pk=pk)
     msg.delete()
     return redirect('jewellery-store-td-blog')
+
 
 def update_jewellery_store_blog(request, pk):
     print("Call to update_jewellery_store_featured_product")
