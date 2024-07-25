@@ -1,0 +1,76 @@
+<!doctype html>
+{% load static %}
+<html class="no-js" lang="en">
+    <head>
+        <title>Crafto - The Multipurpose HTML5 Template</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="author" content="ThemeZaa">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+        <meta name="description" content="Elevate your online presence with Crafto - a modern, versatile, multipurpose Bootstrap 5 responsive HTML5, SCSS template using highly creative 48+ ready demos.">
+        <!-- favicon icon -->
+        <link rel="shortcut icon" href="{% static '' %}dev/images/favicon.png">
+        <link rel="apple-touch-icon" href="{% static '' %}dev/images/apple-touch-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="{% static '' %}dev/images/apple-touch-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="{% static '' %}dev/images/apple-touch-icon-114x114.png">
+        <!-- google fonts preconnect -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <!-- style sheets and font icons  -->
+        <link rel="stylesheet" href="{% static '' %}dev/css/vendors.min.css"/>
+        <link rel="stylesheet" href="{% static '' %}dev/css/icon.min.css"/>
+        <link rel="stylesheet" href="{% static '' %}dev/css/style.css"/>
+        <link rel="stylesheet" href="{% static '' %}dev/css/responsive.css"/>
+        <link rel="stylesheet" href="{% static '' %}dev/demos/jewellery-store/jewellery-store.css" />
+    </head>
+    <body data-mobile-nav-style="classic">
+        <!-- start header -->
+
+        <!-- end header -->
+        <!-- start page title -->
+
+            <div class="container">
+                <div class="row g-0 justify-content-center">
+                    <div class="col-xl-4 col-lg-5 col-md-10 contact-form-style-04 md-mb-50px" data-anime='{ "translateY": [0, 0], "opacity": [0,1], "duration": 600, "delay":100, "staggervalue": 150, "easing": "easeOutQuad" }'>
+                        <span class="fs-26 xs-fs-24 alt-font fw-600 text-dark-gray mb-20px d-block">Admin login</span>
+                        <form action="{% url 'admin_login_process' %}" method="post">
+                             {% csrf_token %}
+                            <label class="text-dark-gray mb-10px fw-500">Username <span class="text-red">*</span></label>
+                            <input class="mb-20px bg-very-light-gray form-control required" type="text" name="username" placeholder="Enter your username" />
+                            <label class="text-dark-gray mb-10px fw-500">Password<span class="text-red">*</span></label> 
+                            <input class="mb-20px bg-very-light-gray form-control required" type="password" name="password" placeholder="Enter your password" />
+                            <div class="position-relative terms-condition-box text-start d-flex align-items-center mb-20px">
+                                <label>
+                                    <input type="checkbox" name="remember" id="terms_condition" value="1" class="terms-condition check-box align-middle required">
+                                    <span class="box fs-14">Remember me</span>
+                                </label>
+                                <a href="#" class="fs-14 text-dark-gray fw-500 text-decoration-line-bottom ms-auto">Forget your password?</a>
+                            </div>
+                            <input type="hidden" name="redirect" value="">
+                            <button class="btn btn-medium btn-round-edge btn-dark-gray btn-box-shadow submit w-100" type="submit">Login</button> 
+                            <div class="form-results mt-20px d-none"></div>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+
+        <!-- end section -->
+        <!-- start section -->
+
+        <!-- end section -->
+         <!-- start footer -->
+
+        <!-- end footer -->
+        <!-- start cookie message -->
+
+        <!-- end cookie message -->
+        <!-- start scroll progress -->
+
+        <!-- end scroll progress -->
+        <!-- javascript libraries -->
+        <script type="text/javascript" src="{% static '' %}dev/js/jquery.js"></script>
+        <script type="text/javascript" src="{% static '' %}dev/js/vendors.min.js"></script>
+        <script type="text/javascript" src="{% static '' %}dev/js/main.js"></script>
+    </body>
+</html>

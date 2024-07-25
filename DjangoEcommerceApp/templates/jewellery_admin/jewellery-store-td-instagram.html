@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
+  <title>Blank Page &mdash; Stisla</title>
+
+  <!-- General CSS Files -->
+  <link rel="stylesheet" href="{% static '' %}assets/modules/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="{% static '' %}assets/modules/fontawesome/css/all.min.css">
+
+  <!-- CSS Libraries -->
+
+  <!-- Template CSS -->
+  <link rel="stylesheet" href="{% static '' %}assets/css/style.css">
+  <link rel="stylesheet" href="{% static '' %}assets/css/components.css">
+<!-- Start GA -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-94034622-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-94034622-3');
+</script>
+<!-- /END GA --></head>
+
+<body>
+  <div id="app">
+    <div class="main-wrapper main-wrapper-1">
+      <div class="navbar-bg"></div>
+     {% include 'jewellery_admin/navbar-admin-jewellery.html' %}
+      <!-- Main Content -->
+      <div class="main-content">
+        <section class="section">
+          <div class="section-header">
+            <h1>Get Instagram Image</h1>
+          </div>
+
+
+
+<!--    this is end table pervious         -->
+<!--          new new table started -->
+          <div class="section-body">
+            <div class="row">
+                <div class="col-12 col-md-12 col-lg-12">
+                    <div class="card">
+                      <div class="card-header">
+                        <h4>Simple</h4>
+                      </div>
+                      <div class="card-body">
+                         {% if cat_data %}
+                        <table class="table">
+                          <thead>
+                             <tr>
+      <th scope="col">S No.</th>
+      <th scope="col">Insta img 1</th>
+      <th scope="col">Insta img 2</th>
+      <th scope="col">Insta img 3</th>
+      <th scope="col">Insta img 4</th>
+        <th scope="col">Insta img 5</th>
+        <th scope="col">Insta img 6</th>
+                                 <th scope="col">Update</th>
+        <th scope="col">Delete</th>
+    </tr>
+                          </thead>
+                          <tbody>
+                           {% for x in cat_data %}
+    <tr>
+      <th scope="row">{{x.id}}</th>
+      <td><img src="{{x.instagram_img1.url}}" width="100px" height="100px"></td>
+      <td><img src="{{x.instagram_img2.url}}"  width="100px" height="100px"></td>
+      <td><img src="{{x.instagram_img3.url}}"  width="100px" height="100px"></td>
+       <td><img src="{{x.instagram_img4.url}}"  width="100px" height="100px"></td>
+        <td><img src="{{x.instagram_img5.url}}"  width="100px" height="100px"></td>
+       <td><img src="{{x.instagram_img6.url}}"  width="100px" height="100px"></td>
+      <td><a href="{% url 'update_jewellery_insta' x.id %}">Update</a></td>
+      <td><a href="{% url 'delete_jewellery_insta' x.id %}" >Delete</a></td>
+    </tr>
+  {% endfor %}
+  {% else %}
+                          </tbody>
+                        </table>
+                        {% endif %}
+                      </div>
+                    </div>
+
+
+                  </div>
+            </div>
+          </div>
+
+        </section>
+      </div>
+<!--      <footer class="main-footer">-->
+<!--        <div class="footer-left">-->
+<!--          Copyright &copy; 2018 <div class="bullet"></div> Design By <a href="https://nauval.in/">Muhamad Nauval Azhar</a>-->
+<!--        </div>-->
+<!--        <div class="footer-right">-->
+
+<!--        </div>-->
+<!--      </footer>-->
+    </div>
+  </div>
+
+  <!-- General JS Scripts -->
+  <script src="{% static '' %}assets/modules/jquery.min.js"></script>
+  <script src="{% static '' %}assets/modules/popper.js"></script>
+  <script src="{% static '' %}assets/modules/tooltip.js"></script>
+  <script src="{% static '' %}assets/modules/bootstrap/js/bootstrap.min.js"></script>
+  <script src="{% static '' %}assets/modules/nicescroll/jquery.nicescroll.min.js"></script>
+  <script src="{% static '' %}assets/modules/moment.min.js"></script>
+  <script src="{% static '' %}assets/js/stisla.js"></script>
+
+  <!-- JS Libraies -->
+
+  <!-- Page Specific JS File -->
+
+  <!-- Template JS File -->
+  <script src="{% static '' %}assets/js/scripts.js"></script>
+  <script src="{% static '' %}assets/js/custom.js"></script>
+</body>
+</html>

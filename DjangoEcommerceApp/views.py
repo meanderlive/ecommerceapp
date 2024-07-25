@@ -21,7 +21,14 @@ def adminLoginProcess(request):
     user=authenticate(request=request,username=username,password=password)
     if user is not None:
         login(request=request,user=user)
+
         return HttpResponseRedirect(reverse("admin_home"))
+
+        return HttpResponseRedirect(reverse("jewellery-td-store-cat-images"))
+    # jewellery-account
+
+    # admin_home
+
     else:
         messages.error(request,"Error in Login! Invalid Login Details!")
         return HttpResponseRedirect(reverse("admin_login"))

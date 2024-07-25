@@ -203,4 +203,71 @@ def save_user_profile(sender,instance,**kwargs):
     if instance.user_type==3:
         instance.merchantuser.save()
     if instance.user_type==4:
+
         instance.customeruser.save()
+
+        instance.customeruser.save()
+
+
+# jewellery-store modals table
+
+class Jewellery_store_cat(models.Model):
+    earrings_image = models.ImageField(upload_to='images/')
+    rings_image = models.ImageField(upload_to='images/')
+    bracelet_image = models.ImageField(upload_to='images/')
+    necklace_image = models.ImageField(upload_to='images/')
+
+
+class Featured_products(models.Model):
+    date_time = models.DateTimeField(auto_now_add=True)
+    featured_product_image = models.ImageField(upload_to='images/')
+    featured_product_title = models.CharField(max_length=255)
+    featured_product_price = models.CharField(max_length=255)
+
+
+class Instagram_image(models.Model):
+    instagram_img1 = models.ImageField(upload_to='images/')
+    instagram_img2 = models.ImageField(upload_to='images/')
+    instagram_img3 = models.ImageField(upload_to='images/')
+    instagram_img4 = models.ImageField(upload_to='images/')
+    instagram_img5 = models.ImageField(upload_to='images/')
+    instagram_img6 = models.ImageField(upload_to='images/')
+
+
+
+class Categories_images(models.Model):
+    earrings_image = models.ImageField(upload_to='images/')
+    rings_image = models.ImageField(upload_to='images/')
+    bracelet_image = models.ImageField(upload_to='images/')
+    necklace_image = models.ImageField(upload_to='images/')
+    Bangles_image = models.ImageField(upload_to='images/')
+    Pendants_image = models.ImageField(upload_to='images/')
+    Chain_image = models.ImageField(upload_to='images/')
+
+
+class Blog_c(models.Model):
+    image = models.ImageField(upload_to='images/')
+    title = models.CharField(max_length=255)
+    description = models.CharField(max_length=255)
+    author = models.CharField(max_length=255)
+    date = models.DateField(auto_now_add=True)
+
+
+class Slider_home(models.Model):
+    slider_img_left1 = models.ImageField(upload_to='images/')
+    slider_img_right1 = models.ImageField(upload_to='images/')
+    slider_img_left2 = models.ImageField(upload_to='images/')
+    slider_img_right2 = models.ImageField(upload_to='images/')
+    slider_img_left3 = models.ImageField(upload_to='images/')
+    slider_img_right3 = models.ImageField(upload_to='images/')
+
+class ContactMessage(models.Model):
+    name = models.CharField(max_length=255)
+    email = models.EmailField()
+    phone = models.CharField(max_length=15, blank=True, null=True)
+    comment = models.TextField()
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.name
+

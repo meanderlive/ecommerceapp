@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
+  <title>Blank Page &mdash; Stisla</title>
+
+  <!-- General CSS Files -->
+  <link rel="stylesheet" href="{% static '' %}assets/modules/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="{% static '' %}assets/modules/fontawesome/css/all.min.css">
+
+  <!-- CSS Libraries -->
+
+  <!-- Template CSS -->
+  <link rel="stylesheet" href="{% static '' %}assets/css/style.css">
+  <link rel="stylesheet" href="{% static '' %}assets/css/components.css">
+<!-- Start GA -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-94034622-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-94034622-3');
+</script>
+<!-- /END GA --></head>
+
+<body>
+  <div id="app">
+    <div class="main-wrapper main-wrapper-1">
+      <div class="navbar-bg"></div>
+      <nav class="navbar navbar-expand-lg main-navbar">
+        <form class="form-inline mr-auto">
+          <ul class="navbar-nav mr-3">
+            <li><a href="#" data-toggle="sidebar" class="nav-link nav-link-lg"><i class="fas fa-bars"></i></a></li>
+            <li><a href="#" data-toggle="search" class="nav-link nav-link-lg d-sm-none"><i class="fas fa-search"></i></a></li>
+          </ul>
+<!--         position of search element -->
+
+        </form>
+        <ul class="navbar-nav navbar-right">
+<!--         position of msg -->
+<!--          position of notification -->
+<!--        position of image -->
+            <li class="dropdown"><a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg nav-link-user">
+
+            <div class="d-sm-none d-lg-inline-block">Hi, Ujang Maman</div></a>
+            <div class="dropdown-menu dropdown-menu-right">
+
+              <a href="features-profile.html" class="dropdown-item has-icon">
+                <i class="far fa-user"></i> Profile
+              </a>
+              <a href="features-activities.html" class="dropdown-item has-icon">
+                <i class="fas fa-bolt"></i> Activities
+              </a>
+              <a href="features-settings.html" class="dropdown-item has-icon">
+                <i class="fas fa-cog"></i> Settings
+              </a>
+              <div class="dropdown-divider"></div>
+              <a href="#" class="dropdown-item has-icon text-danger">
+                <i class="fas fa-sign-out-alt"></i> Logout
+              </a>
+            </div>
+          </li>
+        </ul>
+      </nav>
+      <div class="main-sidebar sidebar-style-2">
+        <aside id="sidebar-wrapper">
+          <div class="sidebar-brand">
+            <a href="index.html">Jewellery Store</a>
+          </div>
+          <div class="sidebar-brand sidebar-brand-sm">
+            <a href="index.html">JS</a>
+          </div>
+          <ul class="sidebar-menu">
+
+            <li class="dropdown active">
+              <a href="#" class="nav-link "><i class="fas fa-fire"></i><span>Dashboard</span></a>
+
+            </li>
+            <!-- <li class="menu-header">Starter</li> -->
+            <li class="dropdown">
+              <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-fire"></i> <span>Jewellery store</span></a>
+              <ul class="dropdown-menu">
+                <li><a class="nav-link" href="{% url 'jewellery-store-cat-images' %}">js-categories-images-add</a></li>
+                <li><a class="nav-link" href="{% url 'jewellery-td-store-cat-images' %}">js-categories-images-get</a></li>
+
+              </ul>
+            </li>
+            <!-- <li><a class="nav-link" href="blank.html"><i class="far fa-square"></i> <span>Blank Page</span></a></li> -->
+            <li class="dropdown">
+              <a href="#" class="nav-link has-dropdown"><i class="fas fa-fire"></i> <span>Withdrawal</span></a>
+              <ul class="dropdown-menu">
+                <li><a class="nav-link" href="bootstrap-alert.html">Payments</a></li>
+
+              </ul>
+            </li>
+
+            <li >
+              <a href="#" class="nav-link "><i class="fas fa-fire"></i> <span>Settlements</span></a>
+
+            </li>
+            <li >
+              <a href="#" class="nav-link "><i class="fas fa-fire"></i> <span>Chargeback</span></a>
+
+            </li>
+            <li >
+              <a href="#" class="nav-link "><i class="fas fa-fire"></i> <span>Payments Links</span></a>
+
+            </li>            <li >
+              <a href="#" class="nav-link "><i class="fas fa-fire"></i> <span>Settings</span></a>
+
+            </li>
+
+
+
+
+
+          </ul>
+
+             </aside>
+      </div>
+      <!-- Main Content -->
+      <div class="main-content">
+        <section class="section">
+          <div class="section-header">
+            <h1>Blank Page</h1>
+          </div>
+
+         <div class="section-body">
+            <div class="row">
+                <div class="col-12 col-md-12 col-lg-12">
+                    <div class="card">
+                      <div class="card-header">
+                        <h4>Simple</h4>
+                      </div>
+                      <div class="card-body">
+                        <table class="table">
+                          <thead>
+                            <tr>
+                              <th scope="col">#</th>
+                              <th scope="col">First</th>
+                              <th scope="col">Last</th>
+                              <th scope="col">Handle</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <th scope="row">1</th>
+                              <td>Mark</td>
+                              <td>Otto</td>
+                              <td>@mdo</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">2</th>
+                              <td>Jacob</td>
+                              <td>Thornton</td>
+                              <td>@fat</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">3</th>
+                              <td>Larry</td>
+                              <td>the Bird</td>
+                              <td>@twitter</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+
+
+                  </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <footer class="main-footer">
+        <div class="footer-left">
+          Copyright &copy; 2018 <div class="bullet"></div> Design By <a href="https://nauval.in/">Muhamad Nauval Azhar</a>
+        </div>
+        <div class="footer-right">
+
+        </div>
+      </footer>
+    </div>
+  </div>
+
+  <!-- General JS Scripts -->
+  <script src="{% static '' %}assets/modules/jquery.min.js"></script>
+  <script src="{% static '' %}assets/modules/popper.js"></script>
+  <script src="{% static '' %}assets/modules/tooltip.js"></script>
+  <script src="{% static '' %}assets/modules/bootstrap/js/bootstrap.min.js"></script>
+  <script src="{% static '' %}assets/modules/nicescroll/jquery.nicescroll.min.js"></script>
+  <script src="{% static '' %}assets/modules/moment.min.js"></script>
+  <script src="{% static '' %}assets/js/stisla.js"></script>
+
+  <!-- JS Libraies -->
+
+  <!-- Page Specific JS File -->
+
+  <!-- Template JS File -->
+  <script src="{% static '' %}assets/js/scripts.js"></script>
+  <script src="{% static '' %}assets/js/custom.js"></script>
+</body>
+</html>
