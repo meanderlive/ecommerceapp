@@ -209,6 +209,7 @@
                                     <a href="javascript:void(0);" class="nav-link">Pages</a>
                                     <i class="fa-solid fa-angle-down dropdown-toggle" id="navbarDropdownMenuLink3" role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
                                     <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink3">
+                                        <li><a href="{% url 'insert-profile' %}">Create Profile</a></li>
                                         <li><a href="{% url 'jewellery-store-about' %}">About</a></li>
                                         <li><a href="{% url 'jewellery-store-faq' %}">Faq</a></li>
                                         <li><a href="{% url 'jewellery-store-wishlist' %}">Wishlist</a></li>
@@ -234,8 +235,54 @@
                             <div class="widget-text icon alt-font fw-500 d-none d-sm-flex">
                                 <a href="{% url 'jewellery-store-wishlist' %}">Wishlist</a>
                             </div>
-                            <div class="widget-text icon alt-font fw-500 d-none d-sm-flex">
-                                <a href="javascript:void(0)">My account</a>
+                            <div class="header-cart-icon icon">
+                                <div class="header-cart dropdown">
+                                    <a href="javascript:void(0);">Account</a>
+                                    <ul class="cart-item-list">
+
+                                        <li class="cart-item align-items-center">
+
+                                            <div class="product-image">
+                                                <a href="{% url 'register' %}"><img src="{% static '' %}dev/demo-jewellery-store-shop_files/signup.jpeg" class="cart-thumb" alt=""></a>
+                                            </div>
+                                            <div class="product-detail alt-font">
+                                                <a href="{% url 'register' %}">Signup</a>
+
+                                            </div>
+                                        </li>
+                                        <li class="cart-item align-items-center">
+
+                                            <div class="product-image">
+                                                <a href="{% url 'insert-profile' %}"><img src="{% static '' %}dev/demo-jewellery-store-shop_files/profile.png" class="cart-thumb" alt=""></a>
+                                            </div>
+                                            <div class="product-detail alt-font">
+                                                <a href="{% url 'insert-profile' %}">Create profile</a>
+
+                                            </div>
+                                        </li>
+                                        <li class="cart-item align-items-center">
+
+                                            <div class="product-image">
+                                                <a href="{% url 'profile_view' %}"><img src="{% static '' %}dev/demo-jewellery-store-shop_files/—Pngtree—set of male and female_5333320.png" class="cart-thumb" alt=""></a>
+                                            </div>
+                                            <div class="product-detail alt-font">
+                                                <a href="{% url 'profile_view' %}">Get Profile</a>
+
+                                            </div>
+                                        </li>
+                                        <li class="cart-item align-items-center">
+
+                                            <div class="product-image">
+                                                <a href="{% url 'logout' %}"><img src="{% static '' %}dev/demo-jewellery-store-shop_files/logout.png" class="cart-thumb" alt=""></a>
+                                            </div>
+                                            <div class="product-detail alt-font">
+                                                <a href="{% url 'logout' %}">Logout</a>
+
+                                            </div>
+                                        </li>
+
+                                    </ul>
+                                </div>
                             </div>
                             <div class="header-search-icon icon">
                                 <a href="javascript:void(0)" class="search-form-icon header-search-form"><i class="feather icon-feather-search"></i></a>

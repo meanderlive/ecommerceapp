@@ -1,18 +1,44 @@
 #from DjangoEcommerceApp import new_views
-from django.urls import path
+from django.urls import path,re_path
 from django.conf.urls.static import static
+from django.contrib.auth import views as auth_views
 
 #from DjangoEcommerce import settings
 from django.conf import settings
+from django.contrib.auth.views import LogoutView
 from .new_views import *
 from .views import *
+from django.views.generic import TemplateView
 
 urlpatterns = [
     # admin login
+    # register
+    #path('password_reset/', CustomPasswordResetView.as_view(), name='password_reset'),
+    #path('password_reset/done/', auth_views.PasswordResetDoneView.as_view(), name='password_reset_done'),
+    #path('reset/done/', auth_views.PasswordResetCompleteView.as_view(), name='password_reset_complete'),
+    #path('password_reset/confirm/<uidb64>/<token>/', CustomPasswordResetConfirmView.as_view(), name='password_reset_confirm'),
+    path('', home_redirect, name='home'),
+    path('register', register, name='register'),
+    path('custom_login', custom_login, name='custom_login'),
+    path('forget-password', update_password, name='forget-password'),
+    path('change-password/', change_password, name='change_password'),
+    path('all-password/', update_profile, name='update_profile'),
+    path('insert-profile/', insert_profile, name='insert-profile'),
+    path('logout/', LogoutView.as_view(next_page='register'), name='logout'),
+    #  user profile update
+    path('profile/', get_profile, name='profile_view'),
+
+    # URL pattern for updating the user profile
+    path('profile/update/', update_profile, name='profile_update'),
+
+    # URL pattern for deleting the user profile
+    path('profile/delete/', delete_profile, name='profile_delete'),
+
+    # end ===========
     path('admin_login_process',adminLoginProcess,name="admin_login_process"),
     path('admin/', adminLogin,name="admin_login"),
     path('admin_logout_process',adminLogoutProcess,name="admin_logout_process"),
-    path('', jewellery_account,name="jewellery-account"),
+    path('x-account', jewellery_account,name="jewellery-account"),
     path('store-shop', jewellery_store_shop,name="jewellery-store-shop"),
     path('cat', jewellery_store_categories,name="jewellery-store-categories"),
     path('xxblog', jewellery_store_blog,name="jewellery-store-blog"),
@@ -55,5 +81,6 @@ urlpatterns = [
     path('slider-td', jewellery_td_slider, name='jewellery-td-store-slider-home'),
     path('slider-home-del/<int:pk>', delete_jewellery_slider_home, name='jewellery-store-del-slider-home'),
     path('slider-up/<int:pk>', update_jewellery_slider_home, name='update_jewellery_slider'),
+    re_path(r'^.*/$', TemplateView.as_view(template_name='dev_html/404.html'), name='catchall-404'),
 
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

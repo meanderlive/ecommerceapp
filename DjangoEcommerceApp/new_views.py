@@ -1,13 +1,190 @@
 from django.shortcuts import render,get_object_or_404,redirect
 from django.core.files.storage import FileSystemStorage
 from .models import *
+from django.contrib.auth import logout
 from django.http import HttpResponse
 from django.db import transaction
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth import login
+from .forms import *
+from django.contrib.auth.forms import AuthenticationForm
+from django.shortcuts import render, redirect
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth import update_session_auth_hash
+from django.contrib.auth.views import PasswordResetView, PasswordResetConfirmView
+from django.urls import reverse_lazy
+from django.contrib import messages
+
+def custom_logout_view(request):
+    logout(request)
+    return redirect('register')
+
+class CustomPasswordResetView(PasswordResetView):
+    form_class = CustomPasswordResetForm
+    email_template_name = 'dev_html/password_reset_email.html'
+    subject_template_name = 'dev_html/password_reset_subject.txt'
+    template_name = 'dev_html/password_reset_form.html'
+    success_url = reverse_lazy('password_reset_done')
+
+class CustomPasswordResetConfirmView(PasswordResetConfirmView):
+    form_class = CustomSetPasswordForm
+    success_url = reverse_lazy('password_reset_complete')
+    template_name = 'dev_html/password_reset_confirm.html'
+
+
+def home_redirect(request):
+    print("home_redirect called")
+    if request.user.is_authenticated:
+        print("User is authenticated")
+        return redirect('jewellery-account')
+    else:
+        print("User is not authenticated")
+        return redirect('register')
+
+def register(request):
+    insta = Instagram_image.objects.first()
+    if request.user.is_authenticated:
+        return redirect('jewellery-account')
+    if request.method == 'POST':
+        form = CustomUserCreationForm(request.POST)
+        print(f'POST data: {request.POST}')
+        if form.is_valid():
+            user = form.save()
+            login(request, user)
+            print("Form is valid and user created successfully.")
+            #return render(request,"dev_html/jewellery-store-admin-account.html")
+            return redirect('jewellery-account')
+        else:
+            print("Form is not valid. Errors:", form.errors)
+    else:
+        form = CustomUserCreationForm()
+    return render(request, 'dev_html/demo-jewellery-register.html', {'form': form,"insta": insta})
+
+def custom_login(request):
+    insta = Instagram_image.objects.first()
+    if request.method == 'POST':
+        form = AuthenticationForm(data=request.POST)
+        if form.is_valid():
+            user = form.get_user()
+            login(request, user)
+            return redirect('jewellery-account')
+    else:
+        form = AuthenticationForm()
+    return render(request, 'dev_html/demo-jewellery-login.html', {'form': form, "insta": insta})
+
+@login_required
+def change_password(request):
+    insta = Instagram_image.objects.first()
+    if request.method == 'POST':
+        form = CustomUserChangePasswordForm(user=request.user, data=request.POST)
+        if form.is_valid():
+            form.save()
+            update_session_auth_hash(request, request.user)  # Keeps the user logged in after password change
+            return redirect('jewellery-account')  # Redirect to a success page
+    else:
+        form = CustomUserChangePasswordForm(user=request.user)
+    return render(request, 'dev_html/demo-jewellery-update.html', {'form': form, "insta": insta})
+
+@login_required
+def update_profile(request):
+    insta = Instagram_image.objects.first()
+    user = request.user
+
+    if request.method == 'POST':
+        form = CustomUserUpdateForm(request.POST, request.FILES, instance=user)
+        if form.is_valid():
+            form.save()
+            return redirect('jewellery-account')  # Redirect to the profile page or any other page
+    else:
+        form = CustomUserUpdateForm(instance=user)
+
+    return render(request, 'dev_html/demo-jewellery-all-update.html', {'form': form,"insta": insta})
+
+@login_required
+def update_password(request):
+    insta = Instagram_image.objects.first()
+    user = request.user
+
+    if request.method == 'POST':
+        form = PasswordUpdateForm(request.POST, instance=user)
+        if form.is_valid():
+            form.save()
+            return redirect('jewellery-account')  # Redirect to the profile page or any other page
+    else:
+        form = PasswordUpdateForm(instance=user)
+
+    return render(request, 'dev_html/demo-jewellery-password-update.html', {'form': form,"insta": insta})
+
+@login_required
+def insert_profile(request):
+    insta = Instagram_image.objects.first()
+    user = request.user
+    try:
+        user_profile = UserProfile.objects.get(user=user)
+    except UserProfile.DoesNotExist:
+        user_profile = UserProfile(user=user)
+
+    if request.method == 'POST':
+        form = UserProfileForm(request.POST, request.FILES, instance=user_profile)
+        if form.is_valid():
+            form.save()
+            return redirect('jewellery-account')  # Redirect to the profile page or any other page
+    else:
+        form = UserProfileForm(instance=user_profile)
+
+    return render(request, 'dev_html/demo-jewellery-profile.html', {'form': form,"insta": insta})
+
+
+@login_required
+def get_profile(request):
+    insta = Instagram_image.objects.first()
+    user = request.user
+    try:
+        user_profile = UserProfile.objects.get(user=user)
+    except UserProfile.DoesNotExist:
+        user_profile = None
+    con={'profile': user_profile , "insta": insta}
+    return render(request, 'dev_html/demo-jewellery-profile-view.html', con)
+
+@login_required
+def update_profile(request):
+    insta = Instagram_image.objects.first()
+    user = request.user
+    try:
+        user_profile = UserProfile.objects.get(user=user)
+    except UserProfile.DoesNotExist:
+        user_profile = UserProfile(user=user)
+
+    if request.method == 'POST':
+        form = UserProfileForm(request.POST, request.FILES, instance=user_profile)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Profile updated successfully.')
+            return redirect('profile_view')  # Redirect to the profile page or any other page
+    else:
+        form = UserProfileForm(instance=user_profile)
+
+    return render(request, 'dev_html/demo-jewellery-profile-update.html', {'form': form,"insta": insta})
+
+@login_required
+def delete_profile(request):
+
+    user = request.user
+    try:
+        user_profile = UserProfile.objects.get(user=user)
+        user_profile.delete()
+        messages.success(request, 'Profile deleted successfully.')
+    except UserProfile.DoesNotExist:
+        messages.error(request, 'Profile does not exist.')
+
+    return redirect('profile_view')  # Redirect to a suitable page after deletion
+
+
 
 def jewellery_admin(request):
     return render(request,"dev_html/jewellery-store-admin-account.html")
 
+@login_required
 def jewellery_account(request):
     cat_home_data=Jewellery_store_cat.objects.first()
     mydata= Featured_products.objects.all()

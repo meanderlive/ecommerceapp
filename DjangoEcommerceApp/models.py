@@ -1,14 +1,81 @@
 from django.db import models
-from django.contrib.auth.models import AbstractUser
+from django.contrib.auth.models import AbstractUser , BaseUserManager,Group, Permission
 from django.dispatch import receiver
 from django.db.models.signals import post_save
 from django.urls import reverse
+from django.conf import settings
+
+
+
+
+"""class User(AbstractUser):
+    email = models.EmailField(unique=True)
+    username = models.CharField(max_length=150, unique=True)
+
+    USERNAME_FIELD = 'email'
+    REQUIRED_FIELDS = ['username']
+
+    objects = CustomUserManager()
+
+    class Meta:
+        app_label = 'DjangoEcommerceApp'
+
+class Customer(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)"""
+
+"""class User(AbstractUser):
+    email = models.EmailField(unique=True)
+    username = models.CharField(max_length=150, unique=True)
+
+    groups = models.ManyToManyField(
+        Group,
+        related_name='customuser_groups',  # Change related_name to avoid conflict
+        blank=True,
+    )
+    user_permissions = models.ManyToManyField(
+        Permission,
+        related_name='customuser_permissions',  # Change related_name to avoid conflict
+        blank=True,
+    )
+
+    USERNAME_FIELD = 'email'
+    REQUIRED_FIELDS = ['username']
+
+    objects = CustomUserManager()
+
+    class Meta:
+        app_label = 'DjangoEcommerceApp'"""
+
+
+
 
 # Create your models here.
-class CustomUser(AbstractUser):
+"""class CustomUser(AbstractUser):
     user_type_choices=((1,"Admin"),(2,"Staff"),(3,"Merchant"),(4,"Customer"))
-    user_type=models.CharField(max_length=255,choices=user_type_choices,default=1)
+    user_type=models.CharField(max_length=255,choices=user_type_choices,default=1)"""
 
+class CustomUser(AbstractUser):
+    USER_TYPE_CHOICES = (
+        (1, "Admin"),
+        (2, "Staff"),
+        (3, "Merchant"),
+        (4, "Customer"),
+    )
+
+    user_type = models.IntegerField(choices=USER_TYPE_CHOICES, default=4)
+
+    def is_customer(self):
+        return self.user_type == 4
+
+class UserProfile(models.Model):
+    user = models.ForeignKey(CustomUser, on_delete=models.CASCADE)
+    full_name = models.CharField(max_length=255)
+    mobile_number = models.CharField(max_length=20)
+    image = models.ImageField(upload_to='profile_images/', null=True, blank=True)
+    address = models.TextField()
+
+    def __str__(self):
+        return self.full_name
 
 class AdminUser(models.Model):
     profile_pic=models.FileField(default="")
@@ -271,3 +338,7 @@ class ContactMessage(models.Model):
     def __str__(self):
         return self.name
 
+class My_user(models.Model):
+    username = models.CharField(max_length=255)
+    email = models.EmailField()
+    password = models.CharField(max_length=255)
