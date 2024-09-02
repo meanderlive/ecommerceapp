@@ -1,39 +1,7 @@
-﻿<!doctype html>
+﻿{% extends 'dev_html/main.html' %}
+{% block content %}
 {% load static %}
-<html class="no-js" lang="en">
-    <head>
-        <title>Crafto - The Multipurpose HTML5 Template</title>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="author" content="ThemeZaa">
-        <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-        <meta name="description" content="Elevate your online presence with Crafto - a modern, versatile, multipurpose Bootstrap 5 responsive HTML5, SCSS template using highly creative 48+ ready demos.">
-        <!-- favicon icon -->
-        <link rel="shortcut icon" href="{% static '' %}dev/images/favicon.png">
-        <link rel="apple-touch-icon" href="{% static '' %}dev/images/apple-touch-icon-57x57.png">
-        <link rel="apple-touch-icon" sizes="72x72" href="{% static '' %}dev/images/apple-touch-icon-72x72.png">
-        <link rel="apple-touch-icon" sizes="114x114" href="{% static '' %}dev/images/apple-touch-icon-114x114.png">
-        <!-- google fonts preconnect -->
-        <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <!-- bubblemorph add-on files -->
-        <link rel='stylesheet' href='dev/revolution/revolution-addons/bubblemorph/css/revolution.addon.bubblemorph.css' type='text/css' media='all' />
-        <!-- slider revolution CSS files -->
-        <link rel="stylesheet" type="text/css" href="{% static '' %}dev/revolution/css/settings.css">
-        <link rel="stylesheet" type="text/css" href="{% static '' %}dev/revolution/css/layers.css">
-        <link rel="stylesheet" type="text/css" href="{% static '' %}dev/revolution/css/navigation.css">
-        <!-- style sheets and font icons  -->
-        <link rel="stylesheet" href="{% static '' %}dev/css/vendors.min.css"/>
-        <link rel="stylesheet" href="{% static '' %}dev/css/icon.min.css"/>
-        <link rel="stylesheet" href="{% static '' %}dev/css/style.css"/>
-        <link rel="stylesheet" href="{% static '' %}dev/css/responsive.css"/>
-        <link rel="stylesheet" href="{% static '' %}dev/demos/jewellery-store/jewellery-store.css" />
-    </head>
-    <body data-mobile-nav-style="classic">
-        <!-- start header -->
-       {% include 'dev_html/navbar-jewellery.html' %}
-        <!-- end header -->
-        <!-- start banner slider -->
+<!-- start banner slider -->
         {% if slider_img %}
         <section class="p-0 top-space-margin">
             <article class="content">
@@ -279,7 +247,7 @@
                                                 <!-- end image layer -->
                                                 <!-- start button layer -->
                                                 <a class="tp-caption btn rev-btn d-inline-block text-uppercase bg-white shop-btn" 
-                                                   href="demo-jewellery-store-shop.html" 
+                                                   href="javascript:void(0);"
                                                    id="slide-1-layer-09" 
                                                    data-x="['center','left','left','left']" data-hoffset="['0','0','0','0']" 
                                                    data-y="['top','top','top','top']" data-voffset="['0','0','0','0']" 
@@ -553,7 +521,7 @@
                                                 <!-- end image layer -->
                                                 <!-- start button layer -->
                                                 <a class="tp-caption btn rev-btn d-inline-block text-uppercase bg-white shop-btn" 
-                                                   href="demo-jewellery-store-shop.html"
+                                                   href="javascript:void(0);"
                                                    id="slide-2-layer-09" 
                                                    data-x="['center','left','left','left']" data-hoffset="['0','0','0','0']" 
                                                    data-y="['top','top','top','top']" data-voffset="['0','0','0','0']" 
@@ -827,7 +795,7 @@
                                                 <!-- end image layer -->
                                                 <!-- start button layer -->
                                                 <a class="tp-caption btn rev-btn d-inline-block text-uppercase bg-white shop-btn" 
-                                                   href="demo-jewellery-store-shop.html"
+                                                   href="javascript:void(0);"
                                                    id="slide-3-layer-09" 
                                                    data-x="['center','left','left','left']" data-hoffset="['0','0','0','0']" 
                                                    data-y="['top','top','top','top']" data-voffset="['0','0','0','0']" 
@@ -956,7 +924,7 @@
                                     </div>
                                     <div class="category-hover-content d-flex flex-column align-items-center justify-content-center bg-base-color p-40px lg-p-25px">
                                         <h3 class="title text-dark-gray alt-font fw-600 position-relative z-index-1 ls-minus-1px">Earrings<span class="absolute-middle-center text-light-orange z-index-minus-1 fs-150 opacity-6">E</span></h3>
-                                        <a class="fs-14 fw-500 text-dark-gray text-uppercase position-absolute z-index-1 bottom-25px ls-05px" href="demo-jewellery-store-shop.html">View collection</a>
+                                        <a class="fs-14 fw-500 text-dark-gray text-uppercase position-absolute z-index-1 bottom-25px ls-05px" href="javascript:void(0);">View collection</a>
                                     </div>
                                 </div> 
                             </li>
@@ -972,7 +940,7 @@
                                     </div>
                                     <div class="category-hover-content d-flex flex-column align-items-center justify-content-center bg-base-color p-40px lg-p-25px">
                                         <h3 class="title text-dark-gray alt-font fw-600 position-relative z-index-1 ls-minus-1px">Rings<span class="absolute-middle-center text-light-orange z-index-minus-1 fs-150 opacity-6">R</span></h3>
-                                        <a class="fs-14 fw-500 text-dark-gray text-uppercase position-absolute z-index-1 bottom-25px ls-05px" href="demo-jewellery-store-shop.html">View collection</a>
+                                        <a class="fs-14 fw-500 text-dark-gray text-uppercase position-absolute z-index-1 bottom-25px ls-05px" href="javascript:void(0);">View collection</a>
                                     </div>
                                 </div> 
                             </li>
@@ -988,7 +956,7 @@
                                     </div>
                                     <div class="category-hover-content d-flex flex-column align-items-center justify-content-center bg-base-color p-40px lg-p-25px">
                                         <h3 class="title text-dark-gray alt-font fw-600 position-relative z-index-1 ls-minus-1px">Necklace<span class="absolute-middle-center text-light-orange z-index-minus-1 fs-150 opacity-6">N</span></h3>
-                                        <a class="fs-14 fw-500 text-dark-gray text-uppercase position-absolute z-index-1 bottom-25px ls-05px" href="demo-jewellery-store-shop.html">View collection</a>
+                                        <a class="fs-14 fw-500 text-dark-gray text-uppercase position-absolute z-index-1 bottom-25px ls-05px" href="javascript:void(0);">View collection</a>
                                     </div>
                                 </div> 
                             </li>
@@ -1004,7 +972,7 @@
                                     </div>
                                     <div class="category-hover-content d-flex flex-column align-items-center justify-content-center bg-base-color p-40px lg-p-25px">
                                         <h3 class="title text-dark-gray alt-font fw-600 position-relative z-index-1 ls-minus-1px">Bracelet<span class="absolute-middle-center text-light-orange z-index-minus-1 fs-150 opacity-6">B</span></h3>
-                                        <a class="fs-14 fw-500 text-dark-gray text-uppercase position-absolute z-index-1 bottom-25px ls-05px" href="demo-jewellery-store-shop.html">View collection</a>
+                                        <a class="fs-14 fw-500 text-dark-gray text-uppercase position-absolute z-index-1 bottom-25px ls-05px" href="javascript:void(0);">View collection</a>
                                     </div>
                                 </div> 
                             </li>
@@ -1037,12 +1005,12 @@
                                     <li class="grid-item">
                                         <div class="shop-box mb-10px">
                                             <div class="shop-image mb-25px">
-                                                <a href="demo-jewellery-store-single-product.html">
+                                                <a href="javascript:void(0);">
                                                     <img src="{{x.featured_product_image.url}}" alt="">
                                                     <span class="lable new">New</span>
                                                 </a>
                                                 <div class="shop-buttons-wrap">
-                                                    <a href="demo-jewellery-store-single-product.html" class="alt-font btn btn-small btn-box-shadow btn-dark-gray btn-round-edge left-icon add-to-cart">
+                                                    <a href="javascript:void(0);" class="alt-font btn btn-small btn-box-shadow btn-dark-gray btn-round-edge left-icon add-to-cart">
                                                         <i class="feather icon-feather-shopping-bag"></i><span class="quick-view-text button-text">Add to cart</span>
                                                     </a>
                                                 </div>
@@ -1058,7 +1026,7 @@
                                                 </div>
                                             </div>
                                             <div class="shop-footer text-center">
-                                                <a href="demo-jewellery-store-single-product.html" class="text-dark-gray fs-19 fw-500">{{x.featured_product_title}}</a>
+                                                <a href="javascript:void(0);" class="text-dark-gray fs-19 fw-500">{{x.featured_product_title}}</a>
                                                 <div class="price"><del>${{x.featured_product_price}}</del>$189.00</div>
                                             </div>
                                         </div>
@@ -1098,12 +1066,12 @@
                                     <li class="grid-item">
                                         <div class="shop-box mb-10px">
                                             <div class="shop-image mb-25px">
-                                                <a href="demo-jewellery-store-single-product.html">
+                                                <a href="javascript:void(0);">
                                                     <img src="{% static '' %}/dev/demo-jewellery-store-shop_files/demo-jewellery-store-product-06.jpg" alt="">
                                                     <span class="lable hot">Hot</span>
                                                 </a>
                                                 <div class="shop-buttons-wrap">
-                                                    <a href="demo-jewellery-store-single-product.html" class="alt-font btn btn-small btn-box-shadow btn-dark-gray btn-round-edge left-icon add-to-cart">
+                                                    <a href="javascript:void(0);" class="alt-font btn btn-small btn-box-shadow btn-dark-gray btn-round-edge left-icon add-to-cart">
                                                         <i class="feather icon-feather-shopping-bag"></i><span class="quick-view-text button-text">Add to cart</span>
                                                     </a>
                                                 </div>
@@ -1119,7 +1087,7 @@
                                                 </div>
                                             </div>
                                             <div class="shop-footer text-center">
-                                                <a href="demo-jewellery-store-single-product.html" class="text-dark-gray fs-19 fw-500">Geometric gold ring</a>
+                                                <a href="javascript:void(0);" class="text-dark-gray fs-19 fw-500">Geometric gold ring</a>
                                                 <div class="price"><del>$250.00</del>$239.00</div>
                                             </div>
                                         </div>
@@ -1129,12 +1097,12 @@
                                     <li class="grid-item">
                                         <div class="shop-box mb-10px">
                                             <div class="shop-image mb-25px">
-                                                <a href="demo-jewellery-store-single-product.html">
+                                                <a href="javascript:void(0);">
                                                     <img src="{% static '' %}/dev/demo-jewellery-store-shop_files/demo-jewellery-store-product-07.jpg" alt="">
                                                     <span class="lable hot">Hot</span>
                                                 </a>
                                                 <div class="shop-buttons-wrap">
-                                                    <a href="demo-jewellery-store-single-product.html" class="alt-font btn btn-small btn-box-shadow btn-dark-gray btn-round-edge left-icon add-to-cart">
+                                                    <a href="javascript:void(0);" class="alt-font btn btn-small btn-box-shadow btn-dark-gray btn-round-edge left-icon add-to-cart">
                                                         <i class="feather icon-feather-shopping-bag"></i><span class="quick-view-text button-text">Add to cart</span>
                                                     </a>
                                                 </div>
@@ -1150,7 +1118,7 @@
                                                 </div>
                                             </div>
                                             <div class="shop-footer text-center">
-                                                <a href="demo-jewellery-store-single-product.html" class="text-dark-gray fs-19 fw-500">Suserrer earring</a>
+                                                <a href="javascript:void(0);" class="text-dark-gray fs-19 fw-500">Suserrer earring</a>
                                                 <div class="price"><del>$200.00</del>$189.00</div>
                                             </div>
                                         </div>
@@ -1160,11 +1128,11 @@
                                     <li class="grid-item">
                                         <div class="shop-box mb-10px">
                                             <div class="shop-image mb-25px position-relative overflow-hidden">
-                                                <a href="demo-jewellery-store-single-product.html">
+                                                <a href="javascript:void(0);">
                                                     <img src="{% static '' %}/dev/demo-jewellery-store-shop_files/demo-jewellery-store-product-08.jpg" alt="">
                                                 </a>
                                                 <div class="shop-buttons-wrap">
-                                                    <a href="demo-jewellery-store-single-product.html" class="alt-font btn btn-small btn-box-shadow btn-dark-gray btn-round-edge left-icon add-to-cart">
+                                                    <a href="javascript:void(0);" class="alt-font btn btn-small btn-box-shadow btn-dark-gray btn-round-edge left-icon add-to-cart">
                                                         <i class="feather icon-feather-shopping-bag"></i><span class="quick-view-text button-text">Add to cart</span>
                                                     </a>
                                                 </div>
@@ -1180,7 +1148,7 @@
                                                 </div>
                                             </div>
                                             <div class="shop-footer text-center">
-                                                <a href="demo-jewellery-store-single-product.html" class="text-dark-gray fs-19 fw-500">The aphrodite band</a>
+                                                <a href="javascript:void(0);" class="text-dark-gray fs-19 fw-500">The aphrodite band</a>
                                                 <div class="price"><del>$200.00</del>$150.00</div>
                                             </div>
                                         </div>
@@ -1190,11 +1158,11 @@
                                     <li class="grid-item">
                                         <div class="shop-box mb-10px">
                                             <div class="shop-image mb-25px">
-                                                <a href="demo-jewellery-store-single-product.html">
+                                                <a href="javascript:void(0);">
                                                     <img src="{% static '' %}/dev/demo-jewellery-store-shop_files/demo-jewellery-store-featured-products-01.jpg" alt="">
                                                 </a>
                                                 <div class="shop-buttons-wrap">
-                                                    <a href="demo-jewellery-store-single-product.html" class="alt-font btn btn-small btn-box-shadow btn-dark-gray btn-round-edge left-icon add-to-cart">
+                                                    <a href="javascript:void(0);" class="alt-font btn btn-small btn-box-shadow btn-dark-gray btn-round-edge left-icon add-to-cart">
                                                         <i class="feather icon-feather-shopping-bag"></i><span class="quick-view-text button-text">Add to cart</span>
                                                     </a>
                                                 </div>
@@ -1210,7 +1178,7 @@
                                                 </div>
                                             </div>
                                             <div class="shop-footer text-center">
-                                                <a href="demo-jewellery-store-single-product.html" class="text-dark-gray fs-19 fw-500">Diamond earrings</a>
+                                                <a href="javascript:void(0);" class="text-dark-gray fs-19 fw-500">Diamond earrings</a>
                                                 <div class="price"><del>$100.00</del>$89.00</div>
                                             </div>
                                         </div>
@@ -1220,11 +1188,11 @@
                                     <li class="grid-item">
                                         <div class="shop-box mb-10px">
                                             <div class="shop-image mb-25px">
-                                                <a href="demo-jewellery-store-single-product.html">
+                                                <a href="javascript:void(0);">
                                                     <img src="{% static '' %}/dev/demo-jewellery-store-shop_files/demo-jewellery-store-featured-products-02.jpg" alt="">
                                                 </a>
                                                 <div class="shop-buttons-wrap">
-                                                    <a href="demo-jewellery-store-single-product.html" class="alt-font btn btn-small btn-box-shadow btn-dark-gray btn-round-edge left-icon add-to-cart">
+                                                    <a href="javascript:void(0);" class="alt-font btn btn-small btn-box-shadow btn-dark-gray btn-round-edge left-icon add-to-cart">
                                                         <i class="feather icon-feather-shopping-bag"></i><span class="quick-view-text button-text">Add to cart</span>
                                                     </a>
                                                 </div>
@@ -1240,7 +1208,7 @@
                                                 </div>
                                             </div>
                                             <div class="shop-footer text-center">
-                                                <a href="demo-jewellery-store-single-product.html" class="text-dark-gray fs-19 fw-500">Gold diamond ring</a>
+                                                <a href="javascript:void(0);" class="text-dark-gray fs-19 fw-500">Gold diamond ring</a>
                                                 <div class="price"><del>$150.00</del>$129.00</div>
                                             </div>
                                         </div>
@@ -1250,12 +1218,12 @@
                                     <li class="grid-item">
                                         <div class="shop-box mb-10px">
                                             <div class="shop-image mb-25px">
-                                                <a href="demo-jewellery-store-single-product.html">
+                                                <a href="javascript:void(0);">
                                                     <img src="{% static '' %}/dev/demo-jewellery-store-shop_files/demo-jewellery-store-featured-products-03.jpg" alt="">
                                                     <span class="lable new">New</span>
                                                 </a>
                                                 <div class="shop-buttons-wrap">
-                                                    <a href="demo-jewellery-store-single-product.html" class="alt-font btn btn-small btn-box-shadow btn-dark-gray btn-round-edge left-icon add-to-cart">
+                                                    <a href="javascript:void(0);" class="alt-font btn btn-small btn-box-shadow btn-dark-gray btn-round-edge left-icon add-to-cart">
                                                         <i class="feather icon-feather-shopping-bag"></i><span class="quick-view-text button-text">Add to cart</span>
                                                     </a>
                                                 </div>
@@ -1271,7 +1239,7 @@
                                                 </div>
                                             </div>
                                             <div class="shop-footer text-center">
-                                                <a href="demo-jewellery-store-single-product.html" class="text-dark-gray fs-19 fw-500">Diamond earrings</a>
+                                                <a href="javascript:void(0);" class="text-dark-gray fs-19 fw-500">Diamond earrings</a>
                                                 <div class="price"><del>$220.00</del>$168.00</div>
                                             </div>
                                         </div>
@@ -1281,11 +1249,11 @@
                                     <li class="grid-item">
                                         <div class="shop-box mb-10px">
                                             <div class="shop-image mb-25px">
-                                                <a href="demo-jewellery-store-single-product.html">
+                                                <a href="javascript:void(0);">
                                                     <img src="{% static '' %}/dev/demo-jewellery-store-categories/demo-jewellery-store-featured-products-04.jpg" alt="">
                                                 </a>
                                                 <div class="shop-buttons-wrap">
-                                                    <a href="demo-jewellery-store-single-product.html" class="alt-font btn btn-small btn-box-shadow btn-dark-gray btn-round-edge left-icon add-to-cart">
+                                                    <a href="javascript:void(0);" class="alt-font btn btn-small btn-box-shadow btn-dark-gray btn-round-edge left-icon add-to-cart">
                                                         <i class="feather icon-feather-shopping-bag"></i><span class="quick-view-text button-text">Add to cart</span>
                                                     </a>
                                                 </div>
@@ -1301,7 +1269,7 @@
                                                 </div>
                                             </div>
                                             <div class="shop-footer text-center">
-                                                <a href="demo-jewellery-store-single-product.html" class="text-dark-gray fs-19 fw-500">Gemstone earrings</a>
+                                                <a href="javascript:void(0);" class="text-dark-gray fs-19 fw-500">Gemstone earrings</a>
                                                 <div class="price"><del>$200.00</del>$189.00</div>
                                             </div>
                                         </div>
@@ -1311,11 +1279,11 @@
                                     <li class="grid-item">
                                         <div class="shop-box mb-10px">
                                             <div class="shop-image mb-25px">
-                                                <a href="demo-jewellery-store-single-product.html">
+                                                <a href="javascript:void(0);">
                                                     <img src="https://via.placeholder.com/600x765" alt=""> 
                                                 </a>
                                                 <div class="shop-buttons-wrap">
-                                                    <a href="demo-jewellery-store-single-product.html" class="alt-font btn btn-small btn-box-shadow btn-dark-gray btn-round-edge left-icon add-to-cart">
+                                                    <a href="javascript:void(0);" class="alt-font btn btn-small btn-box-shadow btn-dark-gray btn-round-edge left-icon add-to-cart">
                                                         <i class="feather icon-feather-shopping-bag"></i><span class="quick-view-text button-text">Add to cart</span>
                                                     </a>
                                                 </div>
@@ -1331,7 +1299,7 @@
                                                 </div>
                                             </div>
                                             <div class="shop-footer text-center">
-                                                <a href="demo-jewellery-store-single-product.html" class="text-dark-gray fs-19 fw-500">Geometric gold ring</a>
+                                                <a href="javascript:void(0);" class="text-dark-gray fs-19 fw-500">Geometric gold ring</a>
                                                 <div class="price">$150.00</div>
                                             </div>
                                         </div>
@@ -1348,11 +1316,11 @@
                                     <li class="grid-item">
                                         <div class="shop-box mb-10px">
                                             <div class="shop-image mb-25px">
-                                                <a href="demo-jewellery-store-single-product.html">
+                                                <a href="javascript:void(0);">
                                                     <img src="https://via.placeholder.com/600x765" alt=""> 
                                                 </a>
                                                 <div class="shop-buttons-wrap">
-                                                    <a href="demo-jewellery-store-single-product.html" class="alt-font btn btn-small btn-box-shadow btn-dark-gray btn-round-edge left-icon add-to-cart">
+                                                    <a href="javascript:void(0);" class="alt-font btn btn-small btn-box-shadow btn-dark-gray btn-round-edge left-icon add-to-cart">
                                                         <i class="feather icon-feather-shopping-bag"></i><span class="quick-view-text button-text">Add to cart</span>
                                                     </a>
                                                 </div>
@@ -1368,7 +1336,7 @@
                                                 </div>
                                             </div>
                                             <div class="shop-footer text-center">
-                                                <a href="demo-jewellery-store-single-product.html" class="text-dark-gray fs-19 fw-500">Gold diamond ring</a>
+                                                <a href="javascript:void(0);" class="text-dark-gray fs-19 fw-500">Gold diamond ring</a>
                                                 <div class="price">$289.00</div>
                                             </div>
                                         </div>
@@ -1378,11 +1346,11 @@
                                     <li class="grid-item">
                                         <div class="shop-box mb-10px">
                                             <div class="shop-image mb-25px">
-                                                <a href="demo-jewellery-store-single-product.html">
+                                                <a href="javascript:void(0);">
                                                     <img src="https://via.placeholder.com/600x765" alt=""> 
                                                 </a>
                                                 <div class="shop-buttons-wrap">
-                                                    <a href="demo-jewellery-store-single-product.html" class="alt-font btn btn-small btn-box-shadow btn-dark-gray btn-round-edge left-icon add-to-cart">
+                                                    <a href="javascript:void(0);" class="alt-font btn btn-small btn-box-shadow btn-dark-gray btn-round-edge left-icon add-to-cart">
                                                         <i class="feather icon-feather-shopping-bag"></i><span class="quick-view-text button-text">Add to cart</span>
                                                     </a>
                                                 </div>
@@ -1398,7 +1366,7 @@
                                                 </div>
                                             </div>
                                             <div class="shop-footer text-center">
-                                                <a href="demo-jewellery-store-single-product.html" class="text-dark-gray fs-19 fw-500">Diamond earrings</a>
+                                                <a href="javascript:void(0);" class="text-dark-gray fs-19 fw-500">Diamond earrings</a>
                                                 <div class="price"><del>$200.00</del>$189.00</div>
                                             </div>
                                         </div>
@@ -1408,12 +1376,12 @@
                                     <li class="grid-item">
                                         <div class="shop-box mb-10px">
                                             <div class="shop-image mb-25px">
-                                                <a href="demo-jewellery-store-single-product.html">
+                                                <a href="javascript:void(0);">
                                                     <img src="https://via.placeholder.com/600x765" alt=""> 
                                                     <span class="lable new">New</span>
                                                 </a>
                                                 <div class="shop-buttons-wrap">
-                                                    <a href="demo-jewellery-store-single-product.html" class="alt-font btn btn-small btn-box-shadow btn-dark-gray btn-round-edge left-icon add-to-cart">
+                                                    <a href="javascript:void(0);" class="alt-font btn btn-small btn-box-shadow btn-dark-gray btn-round-edge left-icon add-to-cart">
                                                         <i class="feather icon-feather-shopping-bag"></i><span class="quick-view-text button-text">Add to cart</span>
                                                     </a>
                                                 </div>
@@ -1429,7 +1397,7 @@
                                                 </div>
                                             </div>
                                             <div class="shop-footer text-center">
-                                                <a href="demo-jewellery-store-single-product.html" class="text-dark-gray fs-19 fw-500">Geometric gold ring</a>
+                                                <a href="javascript:void(0);" class="text-dark-gray fs-19 fw-500">Geometric gold ring</a>
                                                 <div class="price"><del>$150.00</del>$129.00</div>
                                             </div>
                                         </div>
@@ -1439,12 +1407,12 @@
                                     <li class="grid-item">
                                         <div class="shop-box mb-10px">
                                             <div class="shop-image mb-25px">
-                                                <a href="demo-jewellery-store-single-product.html">
+                                                <a href="javascript:void(0);">
                                                     <img src="https://via.placeholder.com/600x765" alt=""> 
                                                     <span class="lable new">New</span>
                                                 </a>
                                                 <div class="shop-buttons-wrap">
-                                                    <a href="demo-jewellery-store-single-product.html" class="alt-font btn btn-small btn-box-shadow btn-dark-gray btn-round-edge left-icon add-to-cart">
+                                                    <a href="javascript:void(0);" class="alt-font btn btn-small btn-box-shadow btn-dark-gray btn-round-edge left-icon add-to-cart">
                                                         <i class="feather icon-feather-shopping-bag"></i><span class="quick-view-text button-text">Add to cart</span>
                                                     </a>
                                                 </div>
@@ -1460,7 +1428,7 @@
                                                 </div>
                                             </div>
                                             <div class="shop-footer text-center">
-                                                <a href="demo-jewellery-store-single-product.html" class="text-dark-gray fs-19 fw-500">Diamond earrings</a>
+                                                <a href="javascript:void(0);" class="text-dark-gray fs-19 fw-500">Diamond earrings</a>
                                                 <div class="price"><del>$200.00</del>$189.00</div>
                                             </div>
                                         </div>
@@ -1470,11 +1438,11 @@
                                     <li class="grid-item">
                                         <div class="shop-box mb-10px">
                                             <div class="shop-image mb-25px">
-                                                <a href="demo-jewellery-store-single-product.html">
+                                                <a href="javascript:void(0);">
                                                     <img src="https://via.placeholder.com/600x765" alt=""> 
                                                 </a>
                                                 <div class="shop-buttons-wrap">
-                                                    <a href="demo-jewellery-store-single-product.html" class="alt-font btn btn-small btn-box-shadow btn-dark-gray btn-round-edge left-icon add-to-cart">
+                                                    <a href="javascript:void(0);" class="alt-font btn btn-small btn-box-shadow btn-dark-gray btn-round-edge left-icon add-to-cart">
                                                         <i class="feather icon-feather-shopping-bag"></i><span class="quick-view-text button-text">Add to cart</span>
                                                     </a>
                                                 </div>
@@ -1490,7 +1458,7 @@
                                                 </div>
                                             </div>
                                             <div class="shop-footer text-center">
-                                                <a href="demo-jewellery-store-single-product.html" class="text-dark-gray fs-19 fw-500">Geometric gold ring</a>
+                                                <a href="javascript:void(0);" class="text-dark-gray fs-19 fw-500">Geometric gold ring</a>
                                                 <div class="price"><del>$180.00</del>$159.00</div>
                                             </div>
                                         </div>
@@ -1500,12 +1468,12 @@
                                     <li class="grid-item">
                                         <div class="shop-box mb-10px">
                                             <div class="shop-image mb-25px">
-                                                <a href="demo-jewellery-store-single-product.html">
+                                                <a href="javascript:void(0);">
                                                     <img src="https://via.placeholder.com/600x765" alt=""> 
                                                     <span class="lable hot">Hot</span>
                                                 </a>
                                                 <div class="shop-buttons-wrap">
-                                                    <a href="demo-jewellery-store-single-product.html" class="alt-font btn btn-small btn-box-shadow btn-dark-gray btn-round-edge left-icon add-to-cart">
+                                                    <a href="javascript:void(0);" class="alt-font btn btn-small btn-box-shadow btn-dark-gray btn-round-edge left-icon add-to-cart">
                                                         <i class="feather icon-feather-shopping-bag"></i><span class="quick-view-text button-text">Add to cart</span>
                                                     </a>
                                                 </div>
@@ -1521,7 +1489,7 @@
                                                 </div>
                                             </div>
                                             <div class="shop-footer text-center">
-                                                <a href="demo-jewellery-store-single-product.html" class="text-dark-gray fs-19 fw-500">Gemstone earrings</a>
+                                                <a href="javascript:void(0);" class="text-dark-gray fs-19 fw-500">Gemstone earrings</a>
                                                 <div class="price"><del>$200.00</del>$189.00</div>
                                             </div>
                                         </div>
@@ -1531,11 +1499,11 @@
                                     <li class="grid-item">
                                         <div class="shop-box mb-10px">
                                             <div class="shop-image mb-25px">
-                                                <a href="demo-jewellery-store-single-product.html">
+                                                <a href="javascript:void(0);">
                                                     <img src="https://via.placeholder.com/600x765" alt=""> 
                                                 </a>
                                                 <div class="shop-buttons-wrap">
-                                                    <a href="demo-jewellery-store-single-product.html" class="alt-font btn btn-small btn-box-shadow btn-dark-gray btn-round-edge left-icon add-to-cart">
+                                                    <a href="javascript:void(0);" class="alt-font btn btn-small btn-box-shadow btn-dark-gray btn-round-edge left-icon add-to-cart">
                                                         <i class="feather icon-feather-shopping-bag"></i><span class="quick-view-text button-text">Add to cart</span>
                                                     </a>
                                                 </div>
@@ -1551,7 +1519,7 @@
                                                 </div>
                                             </div>
                                             <div class="shop-footer text-center">
-                                                <a href="demo-jewellery-store-single-product.html" class="text-dark-gray fs-19 fw-500">The aphrodite band</a>
+                                                <a href="javascript:void(0);" class="text-dark-gray fs-19 fw-500">The aphrodite band</a>
                                                 <div class="price">$200.00</div>
                                             </div>
                                         </div>
@@ -1561,11 +1529,11 @@
                                     <li class="grid-item">
                                         <div class="shop-box mb-10px">
                                             <div class="shop-image mb-25px">
-                                                <a href="demo-jewellery-store-single-product.html">
+                                                <a href="javascript:void(0);">
                                                     <img src="https://via.placeholder.com/600x765" alt=""> 
                                                 </a>
                                                 <div class="shop-buttons-wrap">
-                                                    <a href="demo-jewellery-store-single-product.html" class="alt-font btn btn-small btn-box-shadow btn-dark-gray btn-round-edge left-icon add-to-cart">
+                                                    <a href="javascript:void(0);" class="alt-font btn btn-small btn-box-shadow btn-dark-gray btn-round-edge left-icon add-to-cart">
                                                         <i class="feather icon-feather-shopping-bag"></i><span class="quick-view-text button-text">Add to cart</span>
                                                     </a>
                                                 </div>
@@ -1581,7 +1549,7 @@
                                                 </div>
                                             </div>
                                             <div class="shop-footer text-center">
-                                                <a href="demo-jewellery-store-single-product.html" class="text-dark-gray fs-19 fw-500">Suserrer earring</a>
+                                                <a href="javascript:void(0);" class="text-dark-gray fs-19 fw-500">Suserrer earring</a>
                                                 <div class="price"><del>$200.00</del>$179.00</div>
                                             </div>
                                         </div>
@@ -1615,11 +1583,11 @@
                                         <div class="swiper-slide grid-item text-center"> 
                                             <div class="shop-box">
                                                 <div class="shop-image mb-25px">
-                                                    <a href="demo-jewellery-store-single-product.html">
+                                                    <a href="javascript:void(0);">
                                                         <img src="{{x.featured_product_image.url}}" alt="">
                                                     </a>
                                                     <div class="shop-buttons-wrap">
-                                                        <a href="demo-jewellery-store-single-product.html" class="alt-font btn btn-small btn-box-shadow btn-dark-gray btn-round-edge left-icon add-to-cart">
+                                                        <a href="javascript:void(0);" class="alt-font btn btn-small btn-box-shadow btn-dark-gray btn-round-edge left-icon add-to-cart">
                                                             <i class="feather icon-feather-shopping-bag"></i><span class="quick-view-text button-text">Add to cart</span>
                                                         </a>
                                                     </div>
@@ -1635,7 +1603,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="shop-footer text-center">
-                                                    <a href="demo-jewellery-store-single-product.html" class="text-dark-gray fs-19 fw-500">{{x.featured_product_title}}</a>
+                                                    <a href="javascript:void(0);" class="text-dark-gray fs-19 fw-500">{{x.featured_product_title}}</a>
                                                     <div class="price"><del>$200.00</del>${{x.featured_product_price}}</div>
                                                 </div>
                                             </div>
@@ -1684,11 +1652,11 @@
                             <li class="grid-item">
                                 <div class="shop-box mb-10px">
                                     <div class="shop-image mb-25px">
-                                        <a href="demo-jewellery-store-single-product.html">
+                                        <a href="javascript:void(0);">
                                             <img src="{{x.featured_product_image.url}}" alt="">
                                         </a>
                                         <div class="shop-buttons-wrap">
-                                            <a href="demo-jewellery-store-single-product.html" class="alt-font btn btn-small btn-box-shadow btn-dark-gray btn-round-edge left-icon add-to-cart">
+                                            <a href="javascript:void(0);" class="alt-font btn btn-small btn-box-shadow btn-dark-gray btn-round-edge left-icon add-to-cart">
                                                 <i class="feather icon-feather-shopping-bag"></i><span class="quick-view-text button-text">Add to cart</span>
                                             </a>
                                         </div>
@@ -1704,7 +1672,7 @@
                                         </div>
                                     </div>
                                     <div class="shop-footer text-center">
-                                        <a href="demo-jewellery-store-single-product.html" class="text-dark-gray fs-19 fw-500">{{x.featured_product_title}}</a>
+                                        <a href="javascript:void(0);" class="text-dark-gray fs-19 fw-500">{{x.featured_product_title}}</a>
                                         <div class="price"><del>$200.00</del>{{x.featured_product_price}}</div>
                                     </div>
                                 </div>
@@ -1786,99 +1754,7 @@
             </div>
         </section>
         <!-- end section -->
-        <!-- start footer -->
-        <footer class="footer-dark bg-seashell-white pb-0 cover-background" style="background-image: url('{% static 'dev/images/demo-jewellery-store-footer-bg.jpg' %}');">
-            <div class="container">
-                <div class="row justify-content-center mb-4 sm-mb-35px">
-                    <!-- start footer column -->
-                    <div class="col-6 col-lg-3 last-paragraph-no-margin order-sm-1 md-mb-50px xs-mb-30px">
-                        <a href="demo-jewellery-store.html" class="footer-logo d-inline-block mb-20px"><img src="{% static '' %}dev/images/demo-jewellery-store-logo-black.png" data-at2x="images/demo-jewellery-store-logo-black@2x.png" alt=""></a>
-                        <span class="lh-22 alt-font fw-500 text-dark-gray d-block w-80 lg-w-100 mb-15px">Please reach out to when you need support.</span>
-                        <div class="fs-16 text-brown"><i class="feather icon-feather-phone-call icon-small me-10px xs-me-5px text-dark-gray"></i><a href="tel:11234567890">+1 1234567890</a></div>
-                        <div class="fs-16"><i class="feather icon-feather-mail icon-small me-10px xs-me-5px text-dark-gray"></i><a href="mailto:info@domain.com">info@domain.com</a></div>
-                    </div>
-                    <!-- end footer column -->
-                    <!-- start footer column -->
-                    <div class="col-6 col-lg-2 col-sm-4 xs-mb-30px order-sm-3 order-lg-2">
-                        <span class="alt-font fw-500 text-dark-gray d-block mb-5px">Categories</span>
-                        <ul class="fs-16">
-                            <li><a href="demo-jewellery-store-shop.html">Women collection</a></li>
-                            <li><a href="demo-jewellery-store-shop.html">Men collection</a></li>
-                            <li><a href="demo-jewellery-store-shop.html">Accessories</a></li>
-                            <li><a href="demo-jewellery-store-shop.html">Diamond</a></li>
-                            <li><a href="demo-jewellery-store-shop.html">Gold jewellery</a></li>
-                        </ul>
-                    </div>
-                    <!-- end footer column -->
-                    <!-- start footer column -->
-                    <div class="col-6 col-lg-2 col-sm-4 xs-mb-30px order-sm-3 order-lg-2">
-                        <span class="alt-font fw-500 text-dark-gray d-block mb-5px">Account</span>
-                        <ul class="fs-16">
-                            <li><a href="#">My profile</a></li>
-                            <li><a href="demo-jewellery-store-cart.html">My order history</a></li>
-                            <li><a href="#">My wish list</a></li>
-                            <li><a href="#">Order tracking</a></li>
-                            <li><a href="demo-jewellery-store-cart.html">Shopping cart</a></li>
-                        </ul>
-                    </div>
-                    <!-- end footer column -->
-                    <!-- start footer column -->
-                    <div class="col-6 col-lg-2 col-sm-4 xs-mb-30px order-sm-3 order-lg-2">
-                        <span class="alt-font fw-500 text-dark-gray d-block mb-5px">Information</span>
-                        <ul class="fs-16">
-                            <li><a href="demo-jewellery-store-about.html">About us</a></li>
-                            <li><a href="demo-jewellery-store-contact.html">Careers</a></li>
-                            <li><a href="#">Events</a></li>
-                            <li><a href="#">Articles</a></li>
-                            <li><a href="demo-jewellery-store-contact.html">Contact us</a></li>
-                        </ul>
-                    </div>
-                    <!-- end footer column -->  
-                    <!-- start footer column -->
-                    <div class="col-lg-3 col-sm-6 ps-30px sm-ps-15px md-mb-50px xs-mb-0 order-sm-2 order-lg-5 text-center text-sm-start">
-                        <span class="alt-font fw-500 text-dark-gray d-block mb-10px">Connect with us</span>
-                        <div class="elements-social social-icon-style-09">
-                            <ul class="small-icon dark mb-20px">
-                                <li><a class="facebook" href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook-f"></i><span></span></a></li>
-                                <li><a class="instagram" href="http://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i><span></span></a></li>
-                                <li><a class="twitter" href="http://www.twitter.com" target="_blank"><i class="fa-brands fa-twitter"></i><span></span></a></li>
-                                <li><a class="dribbble" href="http://www.dribbble.com" target="_blank"><i class="fa-brands fa-dribbble"></i><span></span></a></li>
-                            </ul>
-                        </div>
-                        <span class="alt-font fw-500 text-dark-gray d-block mb-10px">Secure payment</span>
-                        <div class="footer-card d-block d-sm-flex align-items-center">
-                            <a href="#" class="d-inline-block me-5px align-middle"><img src="{% static '' %}dev/images/visa.svg" class="h-25px" alt=""></a>
-                            <a href="#" class="d-inline-block me-5px align-middle"><img src="{% static '' %}dev/images/mastercard.svg" class="h-25px" alt=""></a>
-                            <a href="#" class="d-inline-block me-5px align-middle"><img src="{% static '' %}dev/images/american-express.svg" class="h-25px" alt=""></a>
-                            <a href="#" class="d-inline-block me-5px align-middle"><img src="{% static '' %}dev/images/discover.svg" class="h-25px" alt=""></a>
-                            <a href="#" class="d-inline-block me-5px align-middle"><img src="{% static '' %}dev/images/diners-club.svg" class="h-25px" alt=""></a>
-                        </div>
-                    </div>
-                    <!-- end footer column -->                        
-                </div>
-                <div class="row justify-content-center align-items-center">
-                    <!-- start divider -->
-                    <div class="col-12">
-                        <div class="divider-style-03 divider-style-03-01 border-color-transparent-dark-very-light"></div>
-                    </div>
-                    <!-- end divider -->
-                    <!-- start copyright -->
-                    <div class="col-md-6 pt-20px pb-20px sm-pt-0 fs-16 order-2 order-md-1 text-center text-md-start last-paragraph-no-margin">
-                        <p>&copy; 2024 Crafto is Proudly Powered by <a href="https://www.themezaa.com/" target="_blank" class="text-decoration-line-bottom text-dark-gray">ThemeZaa</a></p>
-                    </div>
-                    <!-- end copyright -->
-                    <!-- start footer menu -->
-                    <div class="col-md-6 pt-20px pb-20px sm-pb-10px fs-16 order-1 order-md-2 text-center text-md-end">
-                        <ul class="footer-navbar xs-lh-normal"> 
-                            <li><a href="#" class="nav-link">Terms and conditions</a></li>
-                            <li><a href="#" class="nav-link">Privacy policy</a></li>
-                        </ul>
-                    </div>
-                    <!-- end footer menu -->
-                </div>
-            </div> 
-        </footer>
-        <!-- end footer -->
+
         <!-- start cookie message -->
         <div id="cookies-model" class="cookie-message bg-dark-gray border-radius-8px"> 
             <div class="cookie-description fs-14 text-white mb-20px lh-22">We use cookies to enhance your browsing experience, serve personalized ads or content, and analyze our traffic. By clicking "Allow cookies" you consent to our use of cookies. </div>   
@@ -2055,5 +1931,4 @@
             }()); /* END OF WRAPPING FUNCTION */
         </script>
         <script type="text/javascript" src="{% static '' %}dev/js/main.js"></script>
-    </body>
-</html>
+   {% endblock %}

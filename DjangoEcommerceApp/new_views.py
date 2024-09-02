@@ -212,6 +212,7 @@ def jewellery_store_shop(request):
     }
     return render(request,"dev_html/demo-jewellery-store-shop.html",con)
 
+@login_required
 def jewellery_store_categories(request):
     insta = Instagram_image.objects.first()
     catee= Categories_images.objects.first()
@@ -221,6 +222,7 @@ def jewellery_store_categories(request):
     }
     return render(request,"dev_html/demo-jewellery-store-categories.html",con)
 
+@login_required
 def jewellery_store_blog(request):
     insta = Instagram_image.objects.first()
     blog_d = Blog_c.objects.all()
@@ -230,6 +232,7 @@ def jewellery_store_blog(request):
     }
     return render(request,"dev_html/demo-jewellery-store-blog.html",con)
 
+@login_required
 def jewellery_store_contact(request):
     insta = Instagram_image.objects.first()
     con = {
@@ -237,6 +240,7 @@ def jewellery_store_contact(request):
     }
     return render(request,"dev_html/demo-jewellery-store-contact.html",con)
 
+@login_required
 def jewellery_store_wishlist(request):
     mydata = Featured_products.objects.all()
     insta = Instagram_image.objects.first()
@@ -246,6 +250,7 @@ def jewellery_store_wishlist(request):
     }
     return render(request,"dev_html/demo-jewellery-store-wishlist.html",con)
 
+@login_required
 def jewellery_store_about(request):
     insta = Instagram_image.objects.first()
     con = {
@@ -253,6 +258,7 @@ def jewellery_store_about(request):
     }
     return render(request,"dev_html/demo-jewellery-store-about.html",con)
 
+@login_required
 def jewellery_store_faq(request):
     insta = Instagram_image.objects.first()
     con = {
@@ -260,6 +266,7 @@ def jewellery_store_faq(request):
     }
     return render(request,"dev_html/demo-jewellery-store-faq.html",con)
 
+@login_required
 def jewellery_store_account(request):
     insta = Instagram_image.objects.first()
     con = {
@@ -267,6 +274,7 @@ def jewellery_store_account(request):
     }
     return render(request,"dev_html/demo-jewellery-store-account.html",con)
 
+@login_required
 def jewellery_store_cart(request):
     insta = Instagram_image.objects.first()
     con = {
@@ -274,6 +282,7 @@ def jewellery_store_cart(request):
     }
     return render(request,"dev_html/demo-jewellery-store-cart.html",con)
 
+@login_required
 def jewellery_store_checkout(request):
     insta = Instagram_image.objects.first()
     con = {
@@ -281,7 +290,7 @@ def jewellery_store_checkout(request):
     }
     return render(request,"dev_html/demo-jewellery-store-checkout.html",con)
 
-
+@login_required
 def jewellery_store_single_product(request):
     insta = Instagram_image.objects.first()
     con = {

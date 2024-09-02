@@ -10,7 +10,6 @@ from django.contrib.auth import get_user_model
 CustomUser = get_user_model()
 
 class CustomUserCreationForm(forms.ModelForm):
-
     password = forms.CharField(label='Password', widget=forms.PasswordInput)
 
     username = forms.CharField(

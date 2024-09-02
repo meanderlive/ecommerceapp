@@ -1,9 +1,10 @@
+  {% load static %}
    <footer class="footer-dark bg-seashell-white pb-0 cover-background" style="background-image: url('{% static 'dev/images/demo-jewellery-store-footer-bg.jpg' %}');">
             <div class="container">
                 <div class="row justify-content-center mb-4 sm-mb-35px">
                     <!-- start footer column -->
                     <div class="col-6 col-lg-3 last-paragraph-no-margin order-sm-1 md-mb-50px xs-mb-30px">
-                        <a href="demo-jewellery-store.html" class="footer-logo d-inline-block mb-20px"><img src="{% static '' %}dev/images/demo-jewellery-store-logo-black.png" data-at2x="images/demo-jewellery-store-logo-black@2x.png" alt=""></a>
+                        <a href="{% url 'jewellery-store-contact' %}" class="footer-logo d-inline-block mb-20px"><img src="{% static '' %}dev/images/demo-jewellery-store-logo-black.png" data-at2x="images/demo-jewellery-store-logo-black@2x.png" alt=""></a>
                         <span class="lh-22 alt-font fw-500 text-dark-gray d-block w-80 lg-w-100 mb-15px">Please reach out to when you need support.</span>
                         <div class="fs-16 text-brown"><i class="feather icon-feather-phone-call icon-small me-10px xs-me-5px text-dark-gray"></i><a href="tel:11234567890">+1 1234567890</a></div>
                         <div class="fs-16"><i class="feather icon-feather-mail icon-small me-10px xs-me-5px text-dark-gray"></i><a href="mailto:info@domain.com">info@domain.com</a></div>
@@ -13,11 +14,11 @@
                     <div class="col-6 col-lg-2 col-sm-4 xs-mb-30px order-sm-3 order-lg-2">
                         <span class="alt-font fw-500 text-dark-gray d-block mb-5px">Categories</span>
                         <ul class="fs-16">
-                            <li><a href="demo-jewellery-store-shop.html">Women collection</a></li>
-                            <li><a href="demo-jewellery-store-shop.html">Men collection</a></li>
-                            <li><a href="demo-jewellery-store-shop.html">Accessories</a></li>
-                            <li><a href="demo-jewellery-store-shop.html">Diamond</a></li>
-                            <li><a href="demo-jewellery-store-shop.html">Gold jewellery</a></li>
+                            <li><a href="javascript:void(0);">Women collection</a></li>
+                            <li><a href="javascript:void(0);">Men collection</a></li>
+                            <li><a href="javascript:void(0);">Accessories</a></li>
+                            <li><a href="javascript:void(0);">Diamond</a></li>
+                            <li><a href="javascript:void(0);">Gold jewellery</a></li>
                         </ul>
                     </div>
                     <!-- end footer column -->
@@ -25,11 +26,11 @@
                     <div class="col-6 col-lg-2 col-sm-4 xs-mb-30px order-sm-3 order-lg-2">
                         <span class="alt-font fw-500 text-dark-gray d-block mb-5px">Account</span>
                         <ul class="fs-16">
-                            <li><a href="#">My profile</a></li>
-                            <li><a href="demo-jewellery-store-cart.html">My order history</a></li>
-                            <li><a href="#">My wish list</a></li>
-                            <li><a href="#">Order tracking</a></li>
-                            <li><a href="demo-jewellery-store-cart.html">Shopping cart</a></li>
+                            <li><a href="{% url 'profile_view' %}">My profile</a></li>
+                            <li><a href="javascript:void(0);">My order history</a></li>
+                            <li><a href="javascript:void(0);">My wish list</a></li>
+                            <li><a href="javascript:void(0);">Order tracking</a></li>
+                            <li><a href="javascript:void(0);">Shopping cart</a></li>
                         </ul>
                     </div>
                     <!-- end footer column -->
@@ -37,11 +38,11 @@
                     <div class="col-6 col-lg-2 col-sm-4 xs-mb-30px order-sm-3 order-lg-2">
                         <span class="alt-font fw-500 text-dark-gray d-block mb-5px">Information</span>
                         <ul class="fs-16">
-                            <li><a href="demo-jewellery-store-about.html">About us</a></li>
-                            <li><a href="demo-jewellery-store-contact.html">Careers</a></li>
-                            <li><a href="#">Events</a></li>
-                            <li><a href="#">Articles</a></li>
-                            <li><a href="demo-jewellery-store-contact.html">Contact us</a></li>
+                            <li><a href="{% url 'jewellery-store-about' %}">About us</a></li>
+                            <li><a href="{% url 'jewellery-store-blog' %}">Blog</a></li>
+                            <li><a href="javascript:void(0);">Events</a></li>
+                            <li><a href="javascript:void(0);">Articles</a></li>
+                            <li><a href="{% url 'jewellery-store-contact' %}">Contact us</a></li>
                         </ul>
                     </div>
                     <!-- end footer column -->
@@ -81,8 +82,8 @@
                     <!-- start footer menu -->
                     <div class="col-md-6 pt-20px pb-20px sm-pb-10px fs-16 order-1 order-md-2 text-center text-md-end">
                         <ul class="footer-navbar xs-lh-normal">
-                            <li><a href="#" class="nav-link">Terms and conditions</a></li>
-                            <li><a href="#" class="nav-link">Privacy policy</a></li>
+                            <li><a href="javascript:void(0);" class="nav-link">Terms and conditions</a></li>
+                            <li><a href="javascript:void(0);" class="nav-link">Privacy policy</a></li>
                         </ul>
                     </div>
                     <!-- end footer menu -->
