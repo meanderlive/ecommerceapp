@@ -72,7 +72,7 @@ def custom_login(request):
         form = AuthenticationForm()
     return render(request, 'dev_html/demo-jewellery-login.html', {'form': form, "insta": insta})
 
-@login_required
+#@login_required
 def change_password(request):
     insta = Instagram_image.objects.first()
     if request.method == 'POST':
@@ -85,7 +85,7 @@ def change_password(request):
         form = CustomUserChangePasswordForm(user=request.user)
     return render(request, 'dev_html/demo-jewellery-update.html', {'form': form, "insta": insta})
 
-@login_required
+#@login_required
 def update_profile(request):
     insta = Instagram_image.objects.first()
     user = request.user
@@ -100,7 +100,7 @@ def update_profile(request):
 
     return render(request, 'dev_html/demo-jewellery-all-update.html', {'form': form,"insta": insta})
 
-@login_required
+#@login_required
 def update_password(request):
     insta = Instagram_image.objects.first()
     user = request.user
@@ -115,7 +115,7 @@ def update_password(request):
 
     return render(request, 'dev_html/demo-jewellery-password-update.html', {'form': form,"insta": insta})
 
-@login_required
+#@login_required
 def insert_profile(request):
     insta = Instagram_image.objects.first()
     user = request.user
@@ -135,7 +135,7 @@ def insert_profile(request):
     return render(request, 'dev_html/demo-jewellery-profile.html', {'form': form,"insta": insta})
 
 
-@login_required
+#@login_required
 def get_profile(request):
     insta = Instagram_image.objects.first()
     user = request.user
@@ -146,7 +146,7 @@ def get_profile(request):
     con={'profile': user_profile , "insta": insta}
     return render(request, 'dev_html/demo-jewellery-profile-view.html', con)
 
-@login_required
+#@login_required
 def update_profile(request):
     insta = Instagram_image.objects.first()
     user = request.user
@@ -166,7 +166,7 @@ def update_profile(request):
 
     return render(request, 'dev_html/demo-jewellery-profile-update.html', {'form': form,"insta": insta})
 
-@login_required
+#@login_required
 def delete_profile(request):
 
     user = request.user
@@ -184,7 +184,7 @@ def delete_profile(request):
 def jewellery_admin(request):
     return render(request,"dev_html/jewellery-store-admin-account.html")
 
-@login_required
+#@login_required
 def jewellery_account(request):
     cat_home_data=Jewellery_store_cat.objects.first()
     mydata= Featured_products.objects.all()
@@ -212,7 +212,7 @@ def jewellery_store_shop(request):
     }
     return render(request,"dev_html/demo-jewellery-store-shop.html",con)
 
-@login_required
+#@login_required
 def jewellery_store_categories(request):
     insta = Instagram_image.objects.first()
     catee= Categories_images.objects.first()
@@ -222,7 +222,7 @@ def jewellery_store_categories(request):
     }
     return render(request,"dev_html/demo-jewellery-store-categories.html",con)
 
-@login_required
+#@login_required
 def jewellery_store_blog(request):
     insta = Instagram_image.objects.first()
     blog_d = Blog_c.objects.all()
@@ -232,7 +232,7 @@ def jewellery_store_blog(request):
     }
     return render(request,"dev_html/demo-jewellery-store-blog.html",con)
 
-@login_required
+#@login_required
 def jewellery_store_contact(request):
     insta = Instagram_image.objects.first()
     con = {
@@ -240,7 +240,7 @@ def jewellery_store_contact(request):
     }
     return render(request,"dev_html/demo-jewellery-store-contact.html",con)
 
-@login_required
+#@login_required
 def jewellery_store_wishlist(request):
     mydata = Featured_products.objects.all()
     insta = Instagram_image.objects.first()
@@ -250,7 +250,7 @@ def jewellery_store_wishlist(request):
     }
     return render(request,"dev_html/demo-jewellery-store-wishlist.html",con)
 
-@login_required
+#@login_required
 def jewellery_store_about(request):
     insta = Instagram_image.objects.first()
     con = {
@@ -258,7 +258,7 @@ def jewellery_store_about(request):
     }
     return render(request,"dev_html/demo-jewellery-store-about.html",con)
 
-@login_required
+#@login_required
 def jewellery_store_faq(request):
     insta = Instagram_image.objects.first()
     con = {
@@ -266,7 +266,7 @@ def jewellery_store_faq(request):
     }
     return render(request,"dev_html/demo-jewellery-store-faq.html",con)
 
-@login_required
+#@login_required
 def jewellery_store_account(request):
     insta = Instagram_image.objects.first()
     con = {
@@ -274,7 +274,7 @@ def jewellery_store_account(request):
     }
     return render(request,"dev_html/demo-jewellery-store-account.html",con)
 
-@login_required
+#@login_required
 def jewellery_store_cart(request):
     insta = Instagram_image.objects.first()
     con = {
@@ -282,7 +282,7 @@ def jewellery_store_cart(request):
     }
     return render(request,"dev_html/demo-jewellery-store-cart.html",con)
 
-@login_required
+#@login_required
 def jewellery_store_checkout(request):
     insta = Instagram_image.objects.first()
     con = {
@@ -290,7 +290,7 @@ def jewellery_store_checkout(request):
     }
     return render(request,"dev_html/demo-jewellery-store-checkout.html",con)
 
-@login_required
+#@login_required
 def jewellery_store_single_product(request):
     insta = Instagram_image.objects.first()
     con = {
